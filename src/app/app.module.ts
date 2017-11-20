@@ -7,13 +7,16 @@ import { AppComponent }                   from './app.component';
 import { PLATFORM_ID, APP_ID, Inject }    from '@angular/core';
 import { isPlatformBrowser }              from '@angular/common';
 import {HomeComponent}                    from './home/home.component';
+// import {FroalaEditorModule, FroalaViewModule} from 'angular-froala-wysiwyg'
 
 @NgModule({
   imports: [
     BrowserModule.withServerTransition({ appId: 'SSR' }),
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    // FroalaEditorModule.forRoot(), // as of now Froala does not support SSR
+    // FroalaViewModule.forRoot()
   ],
   declarations: [
     AppComponent,

@@ -1,5 +1,6 @@
-const path = require('path');
-const webpack = require('webpack');
+const path            = require('path');
+const webpack         = require('webpack');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: { server: './server.ts' },
@@ -27,5 +28,6 @@ module.exports = {
       path.join(__dirname, 'src'),
       {}
     )
+    
   ]
 };
